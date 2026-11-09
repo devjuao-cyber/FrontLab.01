@@ -1,0 +1,269 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #e9e5d8;
+    color: #252820;
+    font-family: "Courier New", monospace;
+    padding: 30px 20px;
+}
+
+header {
+    max-width: 900px;
+    margin: auto;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #252820;
+}
+
+header h1 {
+    font-size: 30px;
+    letter-spacing: -2px;
+}
+
+header h1 span {
+    color: #477344;
+}
+
+header p {
+    font-size: 11px;
+    margin-top: 8px;
+    color: #666;
+}
+
+main {
+    max-width: 900px;
+    margin: 60px auto;
+}
+
+.intro {
+    margin-bottom: 55px;
+}
+
+.intro p {
+    color: #477344;
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.intro h2 {
+    font-size: clamp(30px, 6vw, 48px);
+    line-height: 1.1;
+    letter-spacing: -3px;
+}
+
+.section-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 12px;
+    border-bottom: 2px solid #252820;
+    margin-bottom: 10px;
+}
+
+.section-title h3 {
+    font-size: 14px;
+}
+
+.section-title span {
+    font-size: 10px;
+    color: #477344;
+}
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+
+.product {
+    border: 1px solid #aaa696;
+    padding: 20px;
+    background: #f0ede3;
+}
+
+.product:hover {
+    border-color: #477344;
+}
+
+.product h4 {
+    font-size: 17px;
+    margin-bottom: 10px;
+}
+
+.product p {
+    font-size: 12px;
+    color: #666;
+    min-height: 30px;
+    line-height: 1.5;
+}
+
+.product-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    padding-top: 12px;
+    border-top: 1px dashed #aaa696;
+}
+
+.price {
+    font-weight: bold;
+    color: #477344;
+    font-size: 15px;
+}
+
+.stock {
+    font-size: 10px;
+    color: #777;
+}
+
+footer {
+    max-width: 900px;
+    margin: 80px auto 0;
+    padding-top: 15px;
+    border-top: 1px solid #aaa696;
+    display: flex;
+    justify-content: space-between;
+    font-size: 10px;
+    color: #777;
+}
+
+@media (max-width: 550px) {
+    .products {
+        grid-template-columns: 1fr;
+    }
+
+    footer {
+        flex-direction: column;
+        gap: 8px;
+    }
+}
+
+/* ===== PAINEL ADMIN ===== */
+
+header a {
+    color: #477344;
+    font-weight: bold;
+}
+
+.admin-section {
+    margin-bottom: 55px;
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 16px;
+}
+
+.form-field label {
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.form-field input,
+.form-field textarea {
+    font-family: inherit;
+    font-size: 13px;
+    padding: 10px;
+    border: 1px solid #aaa696;
+    background: #f0ede3;
+    color: #252820;
+}
+
+.form-field input:focus,
+.form-field textarea:focus {
+    outline: none;
+    border-color: #477344;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.btn {
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 10px 18px;
+    border: 2px solid #252820;
+    background: #252820;
+    color: #e9e5d8;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: #477344;
+    border-color: #477344;
+}
+
+.btn-danger {
+    background: transparent;
+    color: #252820;
+    padding: 6px 10px;
+    font-size: 10px;
+}
+
+.btn-danger:hover {
+    background: #8a3b2e;
+    border-color: #8a3b2e;
+    color: #e9e5d8;
+}
+
+.message {
+    margin-top: 16px;
+    padding: 10px 14px;
+    font-size: 12px;
+    border: 1px solid #aaa696;
+}
+
+.message:empty {
+    display: none;
+}
+
+.message.success {
+    border-color: #477344;
+    color: #477344;
+}
+
+.message.error {
+    border-color: #8a3b2e;
+    color: #8a3b2e;
+}
+
+.table-wrapper {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 12px;
+}
+
+th {
+    text-align: left;
+    padding: 10px 8px;
+    border-bottom: 2px solid #252820;
+}
+
+td {
+    padding: 10px 8px;
+    border-bottom: 1px dashed #aaa696;
+}
+
+@media (max-width: 550px) {
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+}
+
+

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RETRO STORE — ADMIN</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="admin.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <h1>RETRO<span>_</span>STORE</h1>
+        <p>PAINEL ADMINISTRATIVO — <a href="index.html">VER LOJA</a></p>
+    </header>
+
+    <main>
+        <section class="admin-section">
+            <div class="section-title">
+                <h3>CADASTRAR PRODUTO</h3>
+            </div>
+
+            <form id="product-form">
+                <div class="form-field">
+                    <label for="name">NOME</label>
+                    <input type="text" id="name" required>
+                </div>
+
+                <div class="form-field">
+                    <label for="description">DESCRIÇÃO</label>
+                    <textarea id="description" rows="3"></textarea>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-field">
+                        <label for="price">PREÇO (R$)</label>
+                        <input type="number" id="price" step="0.01" min="0" required>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="stock">ESTOQUE</label>
+                        <input type="number" id="stock" step="1" min="0" required>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn">CADASTRAR</button>
+            </form>
+
+            <div id="message" class="message"></div>
+        </section>
+
+        <section class="admin-section">
+            <div class="section-title">
+                <h3>PRODUTOS CADASTRADOS</h3>
+                <span id="product-count">0 PRODUTOS</span>
+            </div>
+
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>NOME</th>
+                            <th>PREÇO</th>
+                            <th>ESTOQUE</th>
+                            <th>AÇÕES</th>
+                        </tr>
+                    </thead>
+                    <tbody id="products-table-body">
+                        <tr>
+                            <td>1</td>
+                            <td>Exemplo</td>
+                            <td>R$ 0,00</td>
+                            <td>0</td>
+                            <td><button class="btn btn-danger">EXCLUIR</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>RETRO_STORE © 2026</p>
+        <p>PAINEL ADMIN</p>
+    </footer>
+
+</body>
+</html>
